@@ -1,3 +1,5 @@
+A [License](LICENSE) file has been added which applies to all changes in this fork. All existing license notices have been retained.
+
 # MooTools Core
 
 [![Build Status](https://travis-ci.org/mootools/mootools-core.png?branch=master)](https://travis-ci.org/mootools/mootools-core)
