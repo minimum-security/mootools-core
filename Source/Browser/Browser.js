@@ -150,10 +150,13 @@ Browser.exec = function(text){
 
 String.implement('stripScripts', function(exec){
 	var scripts = '';
-	var text = this.replace(/<script[^>]*>([\s\S]*?)<\/script[^>]*>/gi, function(all, code){
+	var regexp = new RegExp(/<script[^>]*>([\s\S]*?)<\/script[^>]*>/gi);
+	var text = this.replace(regexp, function(all, code){
 		scripts += code + '\n';
 		return '';
 	});
+	//Recursively strip scripts to remove nested scripts.
+	while (text != (text = text.replace(regexp, '')));
 	if (exec === true) Browser.exec(scripts);
 	else if (typeOf(exec) == 'function') exec(scripts, text);
 	return text;

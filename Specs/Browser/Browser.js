@@ -54,6 +54,10 @@ describe('String.stripScripts', function(){
 		expect('<div><script type="text/javascript" src="file.js"></script @#$W;[]<😊></div>'.stripScripts()).to.equal('<div></div>');
 	});
 
+	it('should strip nested script tags', function(){
+		expect('<div><scrip<script>is removed</script>t>alert(123)</script></div>'.stripScripts()).to.equal('<div></div>');
+	});
+
 });
 
 describe('Document', function(){
