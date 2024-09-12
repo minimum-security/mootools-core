@@ -49,6 +49,11 @@ describe('String.stripScripts', function(){
 		expect(window.stripScriptsSpec).to.equal(4242);
 	});
 
+	it('should strip badly formatted closing script tags', function(){
+		expect('<div><script type="text/javascript" src="file.js"></script ></div>'.stripScripts()).to.equal('<div></div>');
+		expect('<div><script type="text/javascript" src="file.js"></script @#$W;[]<😊></div>'.stripScripts()).to.equal('<div></div>');
+	});
+
 });
 
 describe('Document', function(){
