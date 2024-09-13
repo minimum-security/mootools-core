@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mootools/mootools-core.git"
+    "url": "https://github.com/minimum-security/mootools-core.git"
   },
   "keywords": [
     "mootools",
@@ -24,9 +24,9 @@
   "author": "MooTools Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mootools/mootools-core/issues"
+    "url": "https://github.com/minimum-security/mootools-core/issues"
   },
-  "homepage": "http://mootools.net",
+  "homepage": "https://github.com/minimum-security/mootools-core",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "grunt": "^0.4.5",
