@@ -23,8 +23,8 @@ provides: [Core, MooTools, Type, typeOf, instanceOf, Native]
 (function(){
 
 this.MooTools = {
-	version: '1.6.1',
-	build: 'c3546f2d54046ceac0d0fb83aa14c50ea573e6e0'
+	version: '1.6.2-dev',
+	build: '%build%'
 };
 
 // typeOf, instanceOf
